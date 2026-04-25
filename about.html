@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Decoding a Cure — About the Founders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: 'oklch(0.22 0.04 25)',
+          'ink-soft': 'oklch(0.42 0.04 30)',
+          paper: 'oklch(0.94 0.025 80)',
+          'paper-deep': 'oklch(0.88 0.04 78)',
+          oxblood: 'oklch(0.38 0.12 28)',
+          mustard: 'oklch(0.7 0.14 70)',
+          sage: 'oklch(0.6 0.06 130)'
+        },
+        fontFamily: {
+          display: ['Fraunces', 'Georgia', 'serif'],
+          body: ['Inter', 'system-ui', 'sans-serif']
+        },
+        boxShadow: {
+          paper: '0 1px 0 oklch(0.22 0.04 25 / 0.08), 0 8px 24px -12px oklch(0.22 0.04 25 / 0.18)'
+        }
+      }
+    }
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; }
+  h1,h2,h3,h4,h5,h6 { font-family: 'Fraunces', Georgia, serif; font-feature-settings: "ss01","ss02"; }
+  .bg-paper-grain {
+    background-color: oklch(0.94 0.025 80);
+    background-image:
+      radial-gradient(oklch(0.22 0.04 25 / 0.04) 1px, transparent 1px),
+      radial-gradient(oklch(0.22 0.04 25 / 0.025) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 2px;
+  }
+  .deco-rule {
+    background-image: linear-gradient(to right, oklch(0.22 0.04 25) 50%, transparent 50%);
+    background-size: 6px 1px;
+    background-repeat: repeat-x;
+    background-position: 0 50%;
+  }
+  .icon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.125em; }
+  .nav-tab { position: relative; }
+  .nav-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0; right: 0;
+    height: 2px;
+    background-color: oklch(0.38 0.12 28);
+  }
+  .portrait-frame {
+    background-color: oklch(0.88 0.04 78);
+    padding: 12px;
+    box-shadow: 0 1px 0 oklch(0.22 0.04 25 / 0.08), 0 8px 24px -12px oklch(0.22 0.04 25 / 0.18);
+  }
+  .portrait-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: linear-gradient(160deg, oklch(0.85 0.04 78) 0%, oklch(0.80 0.06 75) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  blockquote {
+    border-left: 3px solid oklch(0.38 0.12 28);
+    padding-left: 1.5rem;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+  }
+</style>
+</head>
+<body class="min-h-screen bg-paper-grain text-ink overflow-x-hidden font-body">
+
+<!-- TOP NAV -->
+<nav class="border-b border-ink/15 sticky top-0 z-50 bg-paper-grain/95 backdrop-blur-sm">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-3 shrink-0">
+      <div class="w-8 h-8 bg-ink rounded-sm flex items-center justify-center">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="oklch(0.94 0.025 80)" stroke-width="1.5">
+          <circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+          <line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/>
+        </svg>
+      </div>
+      <span class="font-display font-medium text-lg leading-tight tracking-tight">Decoding <em>a</em> <span class="text-oxblood">Cure</span></span>
+    </a>
+    <div class="flex items-stretch h-16 gap-1">
+      <a href="index.html" class="nav-tab flex items-center px-4 text-[13px] uppercase tracking-[0.18em] text-ink-soft hover:text-ink transition-colors">Home</a>
+      <a href="about.html" class="nav-tab active flex items-center px-4 text-[13px] uppercase tracking-[0.18em] text-ink font-medium hover:text-oxblood transition-colors">About the Founder</a>
+      <a href="episodes.html" class="nav-tab flex items-center px-4 text-[13px] uppercase tracking-[0.18em] text-ink-soft hover:text-ink transition-colors">Episodes</a>
+    </div>
+    <div class="hidden md:block text-[11px] uppercase tracking-[0.22em] text-ink-soft">Vol. I · Spring '26</div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="border-b border-ink/15">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 pt-10 pb-8">
+    <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft mb-4">The People Behind the Mic</div>
+    <h1 class="font-display font-medium tracking-[-0.035em] leading-[0.9]" style="font-size: clamp(2.8rem, 8vw, 7rem);">
+      About the <span class="italic font-light">Founders</span><span class="text-mustard">.</span>
+    </h1>
+    <div class="mt-5 max-w-2xl font-display italic text-xl text-ink/75 leading-snug">
+      Two clinicians who got tired of talking about AI in medicine and started asking the people actually doing it.
+    </div>
+  </div>
+</section>
+
+<!-- HOST 1: MARCUS HALE -->
+<section class="border-b border-ink/15">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-16 md:py-24">
+    <div class="grid md:grid-cols-12 gap-x-12 gap-y-10 items-start">
+
+      <!-- Portrait -->
+      <div class="md:col-span-3">
+        <div class="portrait-frame" style="transform: rotate(-1.2deg);">
+          <div class="portrait-placeholder">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="oklch(0.42 0.04 30)" stroke-width="1" opacity="0.4">
+              <circle cx="32" cy="24" r="12"/><path d="M8 56 Q8 44 32 44 Q56 44 56 56"/>
+            </svg>
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <div class="text-[10px] uppercase tracking-[0.25em] text-ink-soft">Host I</div>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div class="md:col-span-9 md:pt-2">
+        <div class="flex items-end gap-6 mb-8">
+          <h2 class="font-display text-4xl md:text-5xl font-medium tracking-tight">Marcus Hale</h2>
+          <div class="flex-1 h-px deco-rule mb-3 hidden md:block"></div>
+          <div class="hidden md:block text-[11px] uppercase tracking-[0.2em] text-ink-soft mb-2">Internist · Host</div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-6 mb-10">
+          <div>
+            <div class="text-[10px] uppercase tracking-[0.22em] text-mustard mb-2">Affiliation</div>
+            <div class="font-display text-lg">Department of Internal Medicine</div>
+            <div class="text-ink-soft text-sm mt-0.5">Massachusetts General Hospital</div>
+          </div>
+          <div>
+            <div class="text-[10px] uppercase tracking-[0.22em] text-mustard mb-2">Research focus</div>
+            <div class="font-display text-lg">Clinical AI Integration</div>
+            <div class="text-ink-soft text-sm mt-0.5">Cardiology ward decision systems</div>
+          </div>
+        </div>
+
+        <blockquote class="mb-8 text-xl md:text-2xl text-ink/85 leading-snug max-w-xl">
+          "I got curious about machine learning during a long night shift on a cardiology ward. A number on a screen that nobody could explain changed a decision. I wanted to know why."
+        </blockquote>
+
+        <div class="space-y-4 max-w-2xl text-base text-ink/75 leading-relaxed">
+          <p>
+            Marcus Hale has spent fifteen years in internal medicine, most of them trying to understand why good doctors make bad decisions under pressure. When AI tools started appearing on his ward — flagging arrythmias, suggesting dosage adjustments — he didn't resist them or celebrate them. He started asking questions.
+          </p>
+          <p>
+            That curiosity became this show. He believes that the most important conversation in medicine right now isn't about capability — it's about trust, accountability, and what it means for a clinician to hand part of a decision to a machine they can't fully audit.
+          </p>
+          <p>
+            When he isn't recording, he teaches clinical reasoning to residents and reads more cardiology literature than anyone would call reasonable.
+          </p>
+        </div>
+
+        <div class="mt-10 flex items-center gap-6 text-sm">
+          <a href="#" class="font-display italic text-oxblood hover:underline underline-offset-4">Research publications →</a>
+          <a href="#" class="font-display italic text-ink/60 hover:text-ink transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOST 2: PRIYA ANAND -->
+<section class="border-b border-ink/15">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-16 md:py-24">
+    <div class="grid md:grid-cols-12 gap-x-12 gap-y-10 items-start">
+
+      <!-- Bio first on desktop (reversed layout) -->
+      <div class="md:col-span-9 md:pt-2 order-2 md:order-1">
+        <div class="flex items-end gap-6 mb-8">
+          <h2 class="font-display text-4xl md:text-5xl font-medium tracking-tight">Priya Anand</h2>
+          <div class="flex-1 h-px deco-rule mb-3 hidden md:block"></div>
+          <div class="hidden md:block text-[11px] uppercase tracking-[0.2em] text-ink-soft mb-2">Educator · Host</div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-6 mb-10">
+          <div>
+            <div class="text-[10px] uppercase tracking-[0.22em] text-mustard mb-2">Affiliation</div>
+            <div class="font-display text-lg">Department of Medical Education</div>
+            <div class="text-ink-soft text-sm mt-0.5">University of California, San Francisco</div>
+          </div>
+          <div>
+            <div class="text-[10px] uppercase tracking-[0.22em] text-mustard mb-2">Research focus</div>
+            <div class="font-display text-lg">Clinical Reasoning</div>
+            <div class="text-ink-soft text-sm mt-0.5">Diagnostic cognition &amp; uncertainty</div>
+          </div>
+        </div>
+
+        <blockquote class="mb-8 text-xl md:text-2xl text-ink/85 leading-snug max-w-xl">
+          "Medical students learn to be confident. I try to teach them to be calibrated. There's a meaningful difference, and AI is making it more urgent."
+        </blockquote>
+
+        <div class="space-y-4 max-w-2xl text-base text-ink/75 leading-relaxed">
+          <p>
+            Priya Anand teaches medical students by day and writes about clinical reasoning by night. Her work sits at the intersection of how people learn to think and what happens when those same people encounter tools that appear to already know the answer.
+          </p>
+          <p>
+            She came to this podcast not because she's optimistic about AI in medicine — but because she's curious, and because she thinks the questions being avoided are more interesting than the ones being answered.
+          </p>
+          <p>
+            Her writing on diagnostic uncertainty has been cited in clinical education programs across twelve countries. She is finishing a book about how doctors decide what they don't know.
+          </p>
+        </div>
+
+        <div class="mt-10 flex items-center gap-6 text-sm">
+          <a href="#" class="font-display italic text-oxblood hover:underline underline-offset-4">Published work →</a>
+          <a href="#" class="font-display italic text-ink/60 hover:text-ink transition-colors">Contact</a>
+        </div>
+      </div>
+
+      <!-- Portrait -->
+      <div class="md:col-span-3 order-1 md:order-2">
+        <div class="portrait-frame" style="transform: rotate(1.4deg);">
+          <div class="portrait-placeholder">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="oklch(0.42 0.04 30)" stroke-width="1" opacity="0.4">
+              <circle cx="32" cy="24" r="12"/><path d="M8 56 Q8 44 32 44 Q56 44 56 56"/>
+            </svg>
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <div class="text-[10px] uppercase tracking-[0.25em] text-ink-soft">Host II</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- THE CAT -->
+<section class="border-b border-ink/15">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-12">
+    <div class="grid md:grid-cols-12 gap-6 items-center">
+      <div class="md:col-span-1 flex justify-center">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="oklch(0.42 0.04 30)" stroke-width="1.1" opacity="0.5">
+          <path d="M8 36 Q8 20 24 18 Q40 20 40 36 Q40 42 24 42 Q8 42 8 36Z"/>
+          <path d="M8 20 L4 10 L14 18"/><path d="M40 20 L44 10 L34 18"/>
+          <circle cx="18" cy="28" r="2" fill="oklch(0.42 0.04 30)" opacity="0.5"/>
+          <circle cx="30" cy="28" r="2" fill="oklch(0.42 0.04 30)" opacity="0.5"/>
+          <path d="M20 34 Q24 37 28 34"/>
+        </svg>
+      </div>
+      <div class="md:col-span-11">
+        <div class="text-[10px] uppercase tracking-[0.22em] text-ink-soft mb-1">Non-voting contributor</div>
+        <h3 class="font-display text-xl font-medium mb-1">Bayes <span class="italic font-light text-ink-soft text-base">— the cat</span></h3>
+        <p class="text-ink/65 text-sm leading-relaxed max-w-xl">
+          Named for the theorem. Attends every taping. Has knocked over a microphone stand four times. Has not improved any episode. Shows no signs of remorse.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- START LISTENING CTA -->
+<section>
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-20 text-center">
+    <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft mb-4">You've met them.</div>
+    <h2 class="font-display text-4xl md:text-5xl font-medium tracking-tight mb-6">Now hear them think.</h2>
+    <a href="episodes.html" class="inline-flex items-center gap-3 bg-ink text-paper px-7 py-4 text-sm tracking-wide hover:bg-oxblood transition-colors font-medium">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+      Browse the episodes
+    </a>
+  </div>
+</section>
+
+<footer class="border-t border-ink/15">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-ink-soft">
+    <div class="font-display italic">Decoding a Cure — printed on the internet, one Thursday at a time.</div>
+    <div class="flex items-center gap-4">
+      <span>© <span id="year"></span></span><span>·</span><span>Written, recorded &amp; edited by hand.</span>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
