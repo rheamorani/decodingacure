@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Decoding a Cure — Episodes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: 'oklch(0.22 0.04 25)',
+          'ink-soft': 'oklch(0.42 0.04 30)',
+          paper: 'oklch(0.94 0.025 80)',
+          'paper-deep': 'oklch(0.88 0.04 78)',
+          oxblood: 'oklch(0.38 0.12 28)',
+          mustard: 'oklch(0.7 0.14 70)',
+          sage: 'oklch(0.6 0.06 130)'
+        },
+        fontFamily: {
+          display: ['Fraunces', 'Georgia', 'serif'],
+          body: ['Inter', 'system-ui', 'sans-serif']
+        },
+      }
+    }
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; }
+  h1,h2,h3,h4,h5,h6 { font-family: 'Fraunces', Georgia, serif; font-feature-settings: "ss01","ss02"; }
+  .bg-paper-grain {
+    background-color: oklch(0.94 0.025 80);
+    background-image:
+      radial-gradient(oklch(0.22 0.04 25 / 0.04) 1px, transparent 1px),
+      radial-gradient(oklch(0.22 0.04 25 / 0.025) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 2px;
+  }
+  .deco-rule {
+    background-image: linear-gradient(to right, oklch(0.22 0.04 25) 50%, transparent 50%);
+    background-size: 6px 1px;
+    background-repeat: repeat-x;
+    background-position: 0 50%;
+  }
+  .icon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.125em; }
+  .nav-tab { position: relative; }
+  .nav-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0; right: 0;
+    height: 2px;
+    background-color: oklch(0.38 0.12 28);
+  }
+
+  /* Player bar */
+  #player-bar {
+    transform: translateY(100%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  #player-bar.open { transform: translateY(0); }
+
+  /* Progress bar */
+  #progress-track { cursor: pointer; }
+  #progress-fill { transition: width 0.25s linear; }
+</style>
+</head>
+<body class="min-h-screen bg-paper-grain text-ink overflow-x-hidden font-body pb-28">
+
+<!-- TOP NAV -->
+<nav class="border-b border-ink/15 sticky top-0 z-50 bg-paper-grain/95 backdrop-blur-sm">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-3 shrink-0">
+      <div class="w-8 h-8 bg-ink rounded-sm flex items-center justify-center">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="oklch(0.94 0.025 80)" stroke-width="1.5">
+          <circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+          <line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/>
+        </svg>
+      </div>
+      <span class="font-display font-medium text-lg leading-tight tracking-tight">Decoding <em>a</em> <span class="text-oxblood">Cure</span></span>
+    </a>
+    <div class="flex items-stretch h-16 gap-1">
+      <a href="index.html" class="nav-tab flex items-center px-4 text-[13px] uppercase tracking-[0.18em] text-ink-soft hover:text-ink transition-colors">Home</a>
+      <a href="about.html" class="nav-tab flex items-center px-4 text-[13px] uppercase tracking-[0.18em] text-ink-soft hover:text-ink transition-colors">About the Founder</a>
+      <a href="episodes.html" class="nav-tab active flex items-center px-4 text-[13px] uppercase tracking-[0.18em] text-ink font-medium hover:text-oxblood transition-colors">Episodes</a>
+    </div>
+    <div class="hidden md:block text-[11px] uppercase tracking-[0.22em] text-ink-soft">Vol. I · Spring '26</div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="border-b border-ink/15">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 pt-10 pb-8">
+    <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft mb-4">Complete archive</div>
+    <div class="flex items-end justify-between flex-wrap gap-4">
+      <h1 class="font-display font-medium tracking-[-0.035em] leading-[0.9]" style="font-size: clamp(2.8rem, 8vw, 7rem);">
+        The <span class="italic font-light">Index</span><span class="text-mustard">.</span>
+      </h1>
+      <div class="font-display italic text-ink/60 text-lg pb-1">4 episodes · most recent first</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED EPISODE -->
+<section class="border-b border-ink/15 bg-paper-deep/40">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-12">
+    <div class="text-[11px] uppercase tracking-[0.25em] text-mustard mb-6">Latest episode</div>
+    <div class="grid md:grid-cols-12 gap-x-10 gap-y-6 items-start">
+      <div class="md:col-span-8">
+        <div class="flex items-baseline gap-4 mb-3">
+          <span class="font-display text-sm text-ink-soft tabular-nums">No. 04</span>
+          <span class="text-[10px] uppercase tracking-[0.2em] text-ink-soft">Apr · 11, 2026</span>
+          <span class="text-[10px] uppercase tracking-[0.2em] text-ink-soft">44 min</span>
+        </div>
+        <h2 class="font-display text-3xl md:text-5xl font-medium tracking-tight leading-[1.0] mb-5">Rewriting the GFR equation</h2>
+        <p class="text-ink/75 leading-relaxed max-w-2xl text-lg mb-8">
+          Why a small piece of clinical math drew the wrong line for so long — and what it took to convince a hospital to redraw it. Sarah Lin traces the contested path from statistical anomaly to policy change.
+        </p>
+        <div class="flex items-center gap-4 flex-wrap">
+          <button onclick="openPlayer(0)" class="inline-flex items-center gap-3 bg-ink text-paper px-6 py-3 text-sm tracking-wide hover:bg-oxblood transition-colors">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            Play episode
+          </button>
+          <div class="font-display text-base">Sarah Lin</div>
+          <div class="text-xs text-ink-soft">Nephrology, Johns Hopkins</div>
+        </div>
+      </div>
+      <div class="md:col-span-4">
+        <div class="bg-paper-deep p-4" style="transform: rotate(-1deg);">
+          <svg width="100%" viewBox="0 0 240 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="240" height="280" fill="oklch(0.88 0.04 78)"/>
+            <!-- kidney sketch placeholder -->
+            <ellipse cx="90" cy="140" rx="40" ry="58" stroke="oklch(0.38 0.12 28)" stroke-width="1.5" opacity="0.5"/>
+            <ellipse cx="150" cy="140" rx="40" ry="58" stroke="oklch(0.38 0.12 28)" stroke-width="1.5" opacity="0.5"/>
+            <path d="M90 82 Q120 70 150 82" stroke="oklch(0.38 0.12 28)" stroke-width="1" opacity="0.4"/>
+            <path d="M90 198 Q120 210 150 198" stroke="oklch(0.38 0.12 28)" stroke-width="1" opacity="0.4"/>
+            <text x="120" y="148" font-family="serif" font-size="11" fill="oklch(0.38 0.12 28)" text-anchor="middle" opacity="0.6" font-style="italic">Dept. IV</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EPISODE LIST -->
+<section>
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-10">
+    <div class="flex items-end gap-6 mb-8">
+      <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft pb-1">All episodes</div>
+      <div class="flex-1 h-px deco-rule"></div>
+    </div>
+    <ol class="divide-y divide-ink/10 border-y border-ink/10" id="episode-list"></ol>
+    <div class="mt-8 text-sm font-display italic text-ink-soft">Earlier episodes are still being transcribed by hand. We'll get there.</div>
+  </div>
+</section>
+
+<!-- LISTEN ON -->
+<section class="border-t border-ink/15">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-14">
+    <div class="flex items-end gap-6 mb-8">
+      <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft pb-1">Listen on</div>
+      <div class="flex-1 h-px deco-rule"></div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a href="#" class="group border border-ink/15 p-5 hover:border-oxblood hover:bg-paper-deep transition-all">
+        <div class="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2 group-hover:text-mustard transition-colors">Platform I</div>
+        <div class="font-display text-lg group-hover:text-oxblood transition-colors">Apple Podcasts</div>
+      </a>
+      <a href="#" class="group border border-ink/15 p-5 hover:border-oxblood hover:bg-paper-deep transition-all">
+        <div class="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2 group-hover:text-mustard transition-colors">Platform II</div>
+        <div class="font-display text-lg group-hover:text-oxblood transition-colors">Spotify</div>
+      </a>
+      <a href="#" class="group border border-ink/15 p-5 hover:border-oxblood hover:bg-paper-deep transition-all">
+        <div class="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2 group-hover:text-mustard transition-colors">Platform III</div>
+        <div class="font-display text-lg group-hover:text-oxblood transition-colors">Overcast</div>
+      </a>
+      <a href="#" class="group border border-ink/15 p-5 hover:border-oxblood hover:bg-paper-deep transition-all">
+        <div class="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2 group-hover:text-mustard transition-colors">Feed</div>
+        <div class="font-display text-lg group-hover:text-oxblood transition-colors">RSS</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STICKY PLAYER BAR -->
+<div id="player-bar" class="fixed bottom-0 left-0 right-0 z-50 border-t border-ink/20 bg-paper-deep shadow-[0_-8px_32px_oklch(0.22_0.04_25_/_0.12)]">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-4">
+    <!-- Progress track -->
+    <div id="progress-track" class="h-0.5 bg-ink/15 mb-4 relative" onclick="seekTo(event)">
+      <div id="progress-fill" class="h-full bg-oxblood" style="width: 0%"></div>
+    </div>
+
+    <div class="flex items-center gap-5">
+      <!-- Controls -->
+      <div class="flex items-center gap-3 shrink-0">
+        <button onclick="skipBack()" class="text-ink/50 hover:text-ink transition-colors" title="Back 15s">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/>
+            <text x="9" y="16" font-size="5" fill="currentColor" font-family="sans-serif">15</text>
+          </svg>
+        </button>
+        <button id="play-btn" onclick="togglePlay()" class="w-10 h-10 bg-ink text-paper rounded-full flex items-center justify-center hover:bg-oxblood transition-colors">
+          <svg id="play-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+          <svg id="pause-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="hidden"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+        <button onclick="skipForward()" class="text-ink/50 hover:text-ink transition-colors" title="Forward 15s">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.49-3.51"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Episode info -->
+      <div class="flex-1 min-w-0">
+        <div class="font-display text-base leading-tight truncate" id="player-title">—</div>
+        <div class="text-xs text-ink-soft truncate mt-0.5" id="player-guest">—</div>
+      </div>
+
+      <!-- Time -->
+      <div class="shrink-0 tabular-nums text-sm text-ink-soft font-display hidden md:block" id="player-time">0:00 / —</div>
+
+      <!-- Close -->
+      <button onclick="closePlayer()" class="shrink-0 text-ink/40 hover:text-ink transition-colors ml-2">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<footer class="border-t border-ink/15">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-ink-soft">
+    <div class="font-display italic">Decoding a Cure — printed on the internet, one Thursday at a time.</div>
+    <div class="flex items-center gap-4">
+      <span>© <span id="year"></span></span><span>·</span><span>Written, recorded &amp; edited by hand.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const episodes = [
+    { n:"No. 04", date:"Apr · 11, 2026", title:"Rewriting the GFR equation", guest:"Sarah Lin", affil:"Nephrology, Johns Hopkins", blurb:"Why a small piece of clinical math drew the wrong line for so long — and what it took to convince a hospital to redraw it.", duration:"44 min", durationSec: 2640 },
+    { n:"No. 03", date:"Mar · 28, 2026", title:"Teaching medicine, the way kids learn", guest:"Julian Vance", affil:"Medical Education, Mayo Clinic", blurb:"A conversation about play, repetition, and the strange satisfaction of failing a simulated diagnosis at 2 a.m.", duration:"38 min", durationSec: 2280 },
+    { n:"No. 02", date:"Mar · 14, 2026", title:"The quiet bleed", guest:"Aris Thorne", affil:"Neurology, UCSF", blurb:"On the long night when an algorithm flagged a hemorrhage before he did — and what that taught him about trust.", duration:"52 min", durationSec: 3120 },
+    { n:"No. 01", date:"Feb · 29, 2026", title:"Seeing what the eye can't", guest:"Elena Rostova", affil:"Ophthalmology, Stanford", blurb:"A first episode about glaucoma, a phone camera, and the patients who walk into a clinic before the disease arrives.", duration:"47 min", durationSec: 2820 }
+  ];
+
+  const list = document.getElementById('episode-list');
+  list.innerHTML = episodes.map((ep, i) => `
+    <li>
+      <div class="group grid grid-cols-12 gap-4 md:gap-6 py-8 items-start hover:bg-paper-deep/50 transition-colors px-3 -mx-3 cursor-pointer" onclick="openPlayer(${i})">
+        <!-- Number + date -->
+        <div class="col-span-2 md:col-span-1 pt-1">
+          <div class="font-display text-sm text-ink-soft tabular-nums">${ep.n}</div>
+          <div class="text-[10px] uppercase tracking-[0.18em] text-ink-soft/70 mt-1">${ep.date.split(',')[0]}</div>
+        </div>
+
+        <!-- Play button (desktop) -->
+        <div class="hidden md:flex md:col-span-1 items-start pt-1.5">
+          <button class="w-9 h-9 border border-ink/25 rounded-full flex items-center justify-center hover:border-oxblood hover:text-oxblood transition-colors group-hover:border-oxblood group-hover:text-oxblood">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+          </button>
+        </div>
+
+        <!-- Title + blurb -->
+        <div class="col-span-10 md:col-span-7">
+          <h3 class="font-display text-2xl md:text-3xl font-medium leading-snug group-hover:text-oxblood transition-colors mb-2">${ep.title}</h3>
+          <p class="text-ink/65 leading-relaxed max-w-2xl text-sm md:text-base">${ep.blurb}</p>
+        </div>
+
+        <!-- Guest info -->
+        <div class="col-span-7 md:col-span-2 pt-1">
+          <div class="font-display text-base">${ep.guest}</div>
+          <div class="text-xs text-ink-soft mt-0.5 leading-snug">${ep.affil}</div>
+        </div>
+
+        <!-- Duration + arrow -->
+        <div class="col-span-5 md:col-span-1 flex flex-col items-end gap-2 pt-2">
+          <span class="text-xs text-ink-soft tabular-nums">${ep.duration}</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-ink/40 group-hover:text-oxblood transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+            <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+          </svg>
+        </div>
+      </div>
+    </li>
+  `).join('');
+
+  // --- Mini player ---
+  let currentEp = null;
+  let isPlaying = false;
+  let progress = 0; // 0-100
+  let elapsed = 0;
+  let timer = null;
+
+  function openPlayer(i) {
+    currentEp = episodes[i];
+    elapsed = 0;
+    progress = 0;
+    document.getElementById('player-title').textContent = currentEp.title;
+    document.getElementById('player-guest').textContent = currentEp.guest + ' · ' + currentEp.affil;
+    document.getElementById('progress-fill').style.width = '0%';
+    updateTimeDisplay();
+    document.getElementById('player-bar').classList.add('open');
+    startPlay();
+  }
+
+  function closePlayer() {
+    pausePlay();
+    document.getElementById('player-bar').classList.remove('open');
+    currentEp = null;
+  }
+
+  function togglePlay() {
+    if (isPlaying) pausePlay(); else startPlay();
+  }
+
+  function startPlay() {
+    if (!currentEp) return;
+    isPlaying = true;
+    document.getElementById('play-icon').classList.add('hidden');
+    document.getElementById('pause-icon').classList.remove('hidden');
+    clearInterval(timer);
+    timer = setInterval(() => {
+      elapsed = Math.min(elapsed + 1, currentEp.durationSec);
+      progress = (elapsed / currentEp.durationSec) * 100;
+      document.getElementById('progress-fill').style.width = progress + '%';
+      updateTimeDisplay();
+      if (elapsed >= currentEp.durationSec) pausePlay();
+    }, 1000);
+  }
+
+  function pausePlay() {
+    isPlaying = false;
+    clearInterval(timer);
+    document.getElementById('play-icon').classList.remove('hidden');
+    document.getElementById('pause-icon').classList.add('hidden');
+  }
+
+  function skipBack() {
+    if (!currentEp) return;
+    elapsed = Math.max(0, elapsed - 15);
+    progress = (elapsed / currentEp.durationSec) * 100;
+    document.getElementById('progress-fill').style.width = progress + '%';
+    updateTimeDisplay();
+  }
+
+  function skipForward() {
+    if (!currentEp) return;
+    elapsed = Math.min(currentEp.durationSec, elapsed + 15);
+    progress = (elapsed / currentEp.durationSec) * 100;
+    document.getElementById('progress-fill').style.width = progress + '%';
+    updateTimeDisplay();
+  }
+
+  function seekTo(e) {
+    if (!currentEp) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    elapsed = Math.round(pct * currentEp.durationSec);
+    progress = pct * 100;
+    document.getElementById('progress-fill').style.width = progress + '%';
+    updateTimeDisplay();
+  }
+
+  function updateTimeDisplay() {
+    if (!currentEp) return;
+    const fmt = s => `${Math.floor(s/60)}:${String(s % 60).padStart(2,'0')}`;
+    document.getElementById('player-time').textContent = `${fmt(elapsed)} / ${fmt(currentEp.durationSec)}`;
+  }
+</script>
+</body>
+</html>
