@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Decoding a Cure — About the Founders</title>
+<title>Decoding a Cure — About the Founder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -79,6 +79,15 @@
     font-family: 'Fraunces', Georgia, serif;
     font-style: italic;
   }
+  .credential-tag {
+    display: inline-block;
+    border: 1px solid oklch(0.22 0.04 25 / 0.2);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: oklch(0.42 0.04 30);
+  }
 </style>
 </head>
 <body class="min-h-screen bg-paper-grain text-ink overflow-x-hidden font-body">
@@ -107,23 +116,24 @@
 <!-- PAGE HEADER -->
 <section class="border-b border-ink/15">
   <div class="max-w-[1200px] mx-auto px-6 lg:px-10 pt-10 pb-8">
-    <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft mb-4">The People Behind the Mic</div>
+    <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft mb-4">The Person Behind the Mic</div>
     <h1 class="font-display font-medium tracking-[-0.035em] leading-[0.9]" style="font-size: clamp(2.8rem, 8vw, 7rem);">
-      About the <span class="italic font-light">Founders</span><span class="text-mustard">.</span>
+      About the <span class="italic font-light">Founder</span><span class="text-mustard">.</span>
     </h1>
     <div class="mt-5 max-w-2xl font-display italic text-xl text-ink/75 leading-snug">
-      Two clinicians who got tired of talking about AI in medicine and started asking the people actually doing it.
+      A researcher who got tired of waiting to be old enough to ask the hard questions — and started asking them anyway.
     </div>
   </div>
 </section>
 
-<!-- HOST 1: MARCUS HALE -->
+<!-- MAIN BIO -->
 <section class="border-b border-ink/15">
   <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-16 md:py-24">
     <div class="grid md:grid-cols-12 gap-x-12 gap-y-10 items-start">
 
-      <!-- Portrait -->
+      <!-- Portrait column -->
       <div class="md:col-span-3">
+        <!-- Replace the div below with <img src="your-photo.jpg" ...> when ready -->
         <div class="portrait-frame" style="transform: rotate(-1.2deg);">
           <div class="portrait-placeholder">
             <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="oklch(0.42 0.04 30)" stroke-width="1" opacity="0.4">
@@ -132,151 +142,183 @@
           </div>
         </div>
         <div class="mt-4 text-center">
-          <div class="text-[10px] uppercase tracking-[0.25em] text-ink-soft">Host I</div>
+          <div class="text-[10px] uppercase tracking-[0.25em] text-ink-soft">Founder · Host</div>
+        </div>
+        <div class="mt-6 flex flex-col gap-2">
+          <span class="credential-tag">Published Researcher</span>
+          <span class="credential-tag">AI · ML · Radiology</span>
+          <span class="credential-tag">Houston, TX</span>
         </div>
       </div>
 
-      <!-- Bio -->
+      <!-- Bio column -->
       <div class="md:col-span-9 md:pt-2">
-        <div class="flex items-end gap-6 mb-8">
-          <h2 class="font-display text-4xl md:text-5xl font-medium tracking-tight">Marcus Hale</h2>
+        <div class="flex items-end gap-6 mb-8 flex-wrap">
+          <h2 class="font-display text-4xl md:text-5xl font-medium tracking-tight">Rhea Morani</h2>
           <div class="flex-1 h-px deco-rule mb-3 hidden md:block"></div>
-          <div class="hidden md:block text-[11px] uppercase tracking-[0.2em] text-ink-soft mb-2">Internist · Host</div>
+          <div class="hidden md:block text-[11px] uppercase tracking-[0.2em] text-ink-soft mb-2">Founder · Host</div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-x-12 gap-y-6 mb-10">
+        <!-- Affiliation cards -->
+        <div class="grid md:grid-cols-3 gap-x-8 gap-y-6 mb-10 pb-10 border-b border-ink/10">
           <div>
-            <div class="text-[10px] uppercase tracking-[0.22em] text-mustard mb-2">Affiliation</div>
-            <div class="font-display text-lg">Department of Internal Medicine</div>
-            <div class="text-ink-soft text-sm mt-0.5">Massachusetts General Hospital</div>
+            <div class="text-[10px] uppercase tracking-[0.22em] text-mustard mb-2">Education</div>
+            <div class="font-display text-base leading-snug">Carnegie Vanguard High School</div>
+            <div class="text-ink-soft text-xs mt-0.5">GPA 4.0 UW · Houston, TX</div>
           </div>
           <div>
             <div class="text-[10px] uppercase tracking-[0.22em] text-mustard mb-2">Research focus</div>
-            <div class="font-display text-lg">Clinical AI Integration</div>
-            <div class="text-ink-soft text-sm mt-0.5">Cardiology ward decision systems</div>
-          </div>
-        </div>
-
-        <blockquote class="mb-8 text-xl md:text-2xl text-ink/85 leading-snug max-w-xl">
-          "I got curious about machine learning during a long night shift on a cardiology ward. A number on a screen that nobody could explain changed a decision. I wanted to know why."
-        </blockquote>
-
-        <div class="space-y-4 max-w-2xl text-base text-ink/75 leading-relaxed">
-          <p>
-            Marcus Hale has spent fifteen years in internal medicine, most of them trying to understand why good doctors make bad decisions under pressure. When AI tools started appearing on his ward — flagging arrythmias, suggesting dosage adjustments — he didn't resist them or celebrate them. He started asking questions.
-          </p>
-          <p>
-            That curiosity became this show. He believes that the most important conversation in medicine right now isn't about capability — it's about trust, accountability, and what it means for a clinician to hand part of a decision to a machine they can't fully audit.
-          </p>
-          <p>
-            When he isn't recording, he teaches clinical reasoning to residents and reads more cardiology literature than anyone would call reasonable.
-          </p>
-        </div>
-
-        <div class="mt-10 flex items-center gap-6 text-sm">
-          <a href="#" class="font-display italic text-oxblood hover:underline underline-offset-4">Research publications →</a>
-          <a href="#" class="font-display italic text-ink/60 hover:text-ink transition-colors">Contact</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOST 2: PRIYA ANAND -->
-<section class="border-b border-ink/15">
-  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-16 md:py-24">
-    <div class="grid md:grid-cols-12 gap-x-12 gap-y-10 items-start">
-
-      <!-- Bio first on desktop (reversed layout) -->
-      <div class="md:col-span-9 md:pt-2 order-2 md:order-1">
-        <div class="flex items-end gap-6 mb-8">
-          <h2 class="font-display text-4xl md:text-5xl font-medium tracking-tight">Priya Anand</h2>
-          <div class="flex-1 h-px deco-rule mb-3 hidden md:block"></div>
-          <div class="hidden md:block text-[11px] uppercase tracking-[0.2em] text-ink-soft mb-2">Educator · Host</div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-x-12 gap-y-6 mb-10">
-          <div>
-            <div class="text-[10px] uppercase tracking-[0.22em] text-mustard mb-2">Affiliation</div>
-            <div class="font-display text-lg">Department of Medical Education</div>
-            <div class="text-ink-soft text-sm mt-0.5">University of California, San Francisco</div>
+            <div class="font-display text-base leading-snug">AI in Clinical Medicine</div>
+            <div class="text-ink-soft text-xs mt-0.5">Radiology · Oncology · Ophthalmology</div>
           </div>
           <div>
-            <div class="text-[10px] uppercase tracking-[0.22em] text-mustard mb-2">Research focus</div>
-            <div class="font-display text-lg">Clinical Reasoning</div>
-            <div class="text-ink-soft text-sm mt-0.5">Diagnostic cognition &amp; uncertainty</div>
+            <div class="text-[10px] uppercase tracking-[0.22em] text-mustard mb-2">Publications</div>
+            <div class="font-display text-base leading-snug">5 peer-reviewed papers</div>
+            <div class="text-ink-soft text-xs mt-0.5">Cancer Imaging · Diagnostic Cytopathology · Dermatol Surg</div>
           </div>
         </div>
 
+        <!-- Pull quote -->
         <blockquote class="mb-8 text-xl md:text-2xl text-ink/85 leading-snug max-w-xl">
-          "Medical students learn to be confident. I try to teach them to be calibrated. There's a meaningful difference, and AI is making it more urgent."
+          "I didn't start this podcast to explain AI in medicine from the outside. I started it because I'm inside it — running the models, reading the scans, asking the researchers what they actually found."
         </blockquote>
 
-        <div class="space-y-4 max-w-2xl text-base text-ink/75 leading-relaxed">
+        <!-- Body text -->
+        <div class="space-y-5 max-w-2xl text-base text-ink/75 leading-relaxed">
           <p>
-            Priya Anand teaches medical students by day and writes about clinical reasoning by night. Her work sits at the intersection of how people learn to think and what happens when those same people encounter tools that appear to already know the answer.
+            Rhea Morani is a researcher and student at Carnegie Vanguard High School in Houston whose work sits at the exact intersection this podcast explores: machine learning, medical imaging, and the question of what happens when an algorithm gets there first.
           </p>
           <p>
-            She came to this podcast not because she's optimistic about AI in medicine — but because she's curious, and because she thinks the questions being avoided are more interesting than the ones being answered.
+            She has built and trained machine learning models for automated detection of brain hemorrhages on CT scans — the same problem covered in Episode 02. She has programmed computer vision models for glaucoma and diabetic retinopathy detection using a mobile AI retina tracker — the same problem covered in Episode 01. She has co-authored five peer-reviewed publications on topics ranging from pediatric cancer survivors to gallbladder neuroendocrine neoplasms, and has presented at the UT System AI Symposium in Healthcare, the International Symposium on Biomedical Imaging, and the SABI 2025 Annual Conference, among others.
           </p>
           <p>
-            Her writing on diagnostic uncertainty has been cited in clinical education programs across twelve countries. She is finishing a book about how doctors decide what they don't know.
+            She spent a summer at the Michael E. DeBakey VA Medical Center shadowing ENT surgeons, ophthalmologists, and Mohs surgeons — not as an observer waiting to grow up, but as someone already publishing with the attending physicians around her.
+          </p>
+          <p>
+            Most recently, she designed a computational aptamer discovery pipeline identifying EGFR-binding RNA sequences for targeted cancer therapy, presented at the Science and Engineering Fair of Houston in February 2026. She is a Sigma Xi 1st Place honoree across 95+ projects, a Congressional Award Gold recipient, a District UIL 1st Place speaker, and an Inspirit AI Ambassador.
+          </p>
+          <p>
+            This show is not a hobby that sits beside the research. It is an extension of it — a place to pull up a chair and ask the questions that don't fit in an abstract.
           </p>
         </div>
 
-        <div class="mt-10 flex items-center gap-6 text-sm">
-          <a href="#" class="font-display italic text-oxblood hover:underline underline-offset-4">Published work →</a>
-          <a href="#" class="font-display italic text-ink/60 hover:text-ink transition-colors">Contact</a>
+        <div class="mt-10 flex items-center gap-6 text-sm flex-wrap">
+          <a href="https://doi.org/10.1186/s40644-025-00933-6" target="_blank" class="font-display italic text-oxblood hover:underline underline-offset-4">Latest publication →</a>
+          <a href="mailto:rheamorani25@gmail.com" class="font-display italic text-ink/60 hover:text-ink transition-colors">rheamorani25@gmail.com</a>
         </div>
       </div>
-
-      <!-- Portrait -->
-      <div class="md:col-span-3 order-1 md:order-2">
-        <div class="portrait-frame" style="transform: rotate(1.4deg);">
-          <div class="portrait-placeholder">
-            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="oklch(0.42 0.04 30)" stroke-width="1" opacity="0.4">
-              <circle cx="32" cy="24" r="12"/><path d="M8 56 Q8 44 32 44 Q56 44 56 56"/>
-            </svg>
-          </div>
-        </div>
-        <div class="mt-4 text-center">
-          <div class="text-[10px] uppercase tracking-[0.25em] text-ink-soft">Host II</div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- THE CAT -->
+<!-- SELECTED PUBLICATIONS -->
 <section class="border-b border-ink/15">
-  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-12">
-    <div class="grid md:grid-cols-12 gap-6 items-center">
-      <div class="md:col-span-1 flex justify-center">
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="oklch(0.42 0.04 30)" stroke-width="1.1" opacity="0.5">
-          <path d="M8 36 Q8 20 24 18 Q40 20 40 36 Q40 42 24 42 Q8 42 8 36Z"/>
-          <path d="M8 20 L4 10 L14 18"/><path d="M40 20 L44 10 L34 18"/>
-          <circle cx="18" cy="28" r="2" fill="oklch(0.42 0.04 30)" opacity="0.5"/>
-          <circle cx="30" cy="28" r="2" fill="oklch(0.42 0.04 30)" opacity="0.5"/>
-          <path d="M20 34 Q24 37 28 34"/>
-        </svg>
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-16">
+    <div class="flex items-end gap-6 mb-10">
+      <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft pb-1">Select Publications</div>
+      <div class="flex-1 h-px deco-rule"></div>
+      <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft pb-1">5 papers</div>
+    </div>
+
+    <div class="divide-y divide-ink/10">
+
+      <div class="py-6 grid md:grid-cols-12 gap-4 items-baseline group">
+        <div class="md:col-span-1"><div class="text-[10px] uppercase tracking-[0.18em] text-mustard">2026</div></div>
+        <div class="md:col-span-8">
+          <h3 class="font-display text-lg font-medium leading-snug mb-1 group-hover:text-oxblood transition-colors">Surviving childhood cancer: the hidden threat of second malignancies</h3>
+          <p class="text-ink-soft text-sm">Shah R, Yedururi S, <strong>Morani RA</strong>, et al. <em>Cancer Imaging</em>.</p>
+        </div>
+        <div class="md:col-span-3 md:text-right pt-1">
+          <a href="https://doi.org/10.1186/s40644-025-00933-6" target="_blank" class="text-xs font-display italic text-oxblood hover:underline underline-offset-4">Read →</a>
+        </div>
       </div>
-      <div class="md:col-span-11">
-        <div class="text-[10px] uppercase tracking-[0.22em] text-ink-soft mb-1">Non-voting contributor</div>
-        <h3 class="font-display text-xl font-medium mb-1">Bayes <span class="italic font-light text-ink-soft text-base">— the cat</span></h3>
-        <p class="text-ink/65 text-sm leading-relaxed max-w-xl">
-          Named for the theorem. Attends every taping. Has knocked over a microphone stand four times. Has not improved any episode. Shows no signs of remorse.
-        </p>
+
+      <div class="py-6 grid md:grid-cols-12 gap-4 items-baseline group">
+        <div class="md:col-span-1"><div class="text-[10px] uppercase tracking-[0.18em] text-mustard">In Press</div></div>
+        <div class="md:col-span-8">
+          <h3 class="font-display text-lg font-medium leading-snug mb-1 group-hover:text-oxblood transition-colors">Factors associated with time to definitive surgery for pleomorphic dermal sarcoma</h3>
+          <p class="text-ink-soft text-sm">Joshi TP, Taylor RM, <strong>Morani R</strong>, Orengo IF. <em>Dermatol Surg</em>.</p>
+        </div>
+        <div class="md:col-span-3 md:text-right pt-1">
+          <span class="text-xs font-display italic text-ink-soft">Forthcoming</span>
+        </div>
+      </div>
+
+      <div class="py-6 grid md:grid-cols-12 gap-4 items-baseline group">
+        <div class="md:col-span-1"><div class="text-[10px] uppercase tracking-[0.18em] text-mustard">2025</div></div>
+        <div class="md:col-span-8">
+          <h3 class="font-display text-lg font-medium leading-snug mb-1 group-hover:text-oxblood transition-colors">Gallbladder neuroendocrine neoplasms: a review</h3>
+          <p class="text-ink-soft text-sm">Bhosale H, Shah R, <strong>Morani R</strong>, et al. <em>Abdominal Radiology</em>, September 2025.</p>
+        </div>
+        <div class="md:col-span-3 md:text-right pt-1">
+          <a href="https://doi.org/10.1007/s00261-025-05204-3" target="_blank" class="text-xs font-display italic text-oxblood hover:underline underline-offset-4">Read →</a>
+        </div>
+      </div>
+
+      <div class="py-6 grid md:grid-cols-12 gap-4 items-baseline group">
+        <div class="md:col-span-1"><div class="text-[10px] uppercase tracking-[0.18em] text-mustard">2024</div></div>
+        <div class="md:col-span-8">
+          <h3 class="font-display text-lg font-medium leading-snug mb-1 group-hover:text-oxblood transition-colors">AIns (insulin) type amyloidoma of the extremity diagnosed by fine‐needle aspiration</h3>
+          <p class="text-ink-soft text-sm">Ramani NS, <strong>Morani RA</strong>, Krishnan B. <em>Diagnostic Cytopathology</em>. 2024;52(5):E116–E119.</p>
+        </div>
+        <div class="md:col-span-3 md:text-right pt-1">
+          <a href="https://doi.org/10.1002/dc.25291" target="_blank" class="text-xs font-display italic text-oxblood hover:underline underline-offset-4">Read →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SELECT HONORS -->
+<section class="border-b border-ink/15">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-16">
+    <div class="flex items-end gap-6 mb-10">
+      <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft pb-1">Select Honors</div>
+      <div class="flex-1 h-px deco-rule"></div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-x-16 gap-y-5">
+      <div class="flex gap-5 items-baseline">
+        <span class="text-[10px] uppercase tracking-[0.18em] text-mustard shrink-0 tabular-nums">2026</span>
+        <span class="font-display text-base">USABO Biology Olympiad — National Top 20%</span>
+      </div>
+      <div class="flex gap-5 items-baseline">
+        <span class="text-[10px] uppercase tracking-[0.18em] text-mustard shrink-0 tabular-nums">2026</span>
+        <span class="font-display text-base">Congressional Award Gold Certificate</span>
+      </div>
+      <div class="flex gap-5 items-baseline">
+        <span class="text-[10px] uppercase tracking-[0.18em] text-mustard shrink-0 tabular-nums">2026</span>
+        <span class="font-display text-base">District UIL — 1st Place Informative Speaking</span>
+      </div>
+      <div class="flex gap-5 items-baseline">
+        <span class="text-[10px] uppercase tracking-[0.18em] text-mustard shrink-0 tabular-nums">2026</span>
+        <span class="font-display text-base">AI Ambassador, Inspirit AI</span>
+      </div>
+      <div class="flex gap-5 items-baseline">
+        <span class="text-[10px] uppercase tracking-[0.18em] text-mustard shrink-0 tabular-nums">2025</span>
+        <span class="font-display text-base">Sigma Xi — 1st Place of 95+ projects</span>
+      </div>
+      <div class="flex gap-5 items-baseline">
+        <span class="text-[10px] uppercase tracking-[0.18em] text-mustard shrink-0 tabular-nums">2025</span>
+        <span class="font-display text-base">SABI Magna Cum Laude — Three Pearl Presentation</span>
+      </div>
+      <div class="flex gap-5 items-baseline">
+        <span class="text-[10px] uppercase tracking-[0.18em] text-mustard shrink-0 tabular-nums">2024</span>
+        <span class="font-display text-base">Presidential Volunteer Service Award Gold</span>
+      </div>
+      <div class="flex gap-5 items-baseline">
+        <span class="text-[10px] uppercase tracking-[0.18em] text-mustard shrink-0 tabular-nums">2024</span>
+        <span class="font-display text-base">Code Ninjas Black Belt — 1 of 514 worldwide</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- START LISTENING CTA -->
+<!-- CTA -->
 <section>
   <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-20 text-center">
-    <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft mb-4">You've met them.</div>
-    <h2 class="font-display text-4xl md:text-5xl font-medium tracking-tight mb-6">Now hear them think.</h2>
+    <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft mb-4">You've met her.</div>
+    <h2 class="font-display text-4xl md:text-5xl font-medium tracking-tight mb-6">Now hear her think.</h2>
     <a href="episodes.html" class="inline-flex items-center gap-3 bg-ink text-paper px-7 py-4 text-sm tracking-wide hover:bg-oxblood transition-colors font-medium">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
       Browse the episodes
