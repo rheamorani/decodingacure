@@ -22,7 +22,7 @@
           sage: 'oklch(0.6 0.06 130)'
         },
         fontFamily: {
-          display: ['Fraunces', 'Georgia', 'serif'],
+          display: ['MyFunFont', 'Fraunces', 'Georgia', 'serif'], 
           body: ['Inter', 'system-ui', 'sans-serif']
         },
         boxShadow: {
@@ -33,9 +33,16 @@
   };
 </script>
 <style>
+  @font-face {
+    font-family: 'MyFunFont';
+    src: url('Thunky DEMO.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
   html { scroll-behavior: smooth; }
   body { font-family: 'Inter', system-ui, sans-serif; }
-  h1,h2,h3,h4,h5,h6 { font-family: 'Fraunces', Georgia, serif; font-feature-settings: "ss01","ss02"; }
+  h1,h2,h3,h4,h5,h6 { font-family: 'MyFunFont', Georgia, serif; }
   .bg-paper-grain {
     background-color: oklch(0.94 0.025 80);
     background-image:
