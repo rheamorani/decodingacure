@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'SugarMagic', Georgia, serif; }
 .bg-paper-grain {
   background-image: url('background.jpg'); /* Make sure to use your actual image filename (.jpg or .png) */
   background-size: 120px auto;
-  background-position: center;
+  background-position: top left;
   background-repeat: no-repeat;
 }
 
