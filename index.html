@@ -6,6 +6,7 @@
 <title>Decoding a Cure — Home</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -55,40 +56,17 @@
     font-size: large;
   }
 
-  @font-face{
+  @font-face {
     font-family: 'Roherat';
     src: url('Roherat-Regular.ttf') format('truetype');
     font-weight: bolder;
     font-style: normal;
   }
 
+
   html { scroll-behavior: smooth; }
   body { font-family: 'Inter', system-ui, sans-serif; }
-  h1,h2,h3,h4,h5,h6 { font-family: 'MyFunFont', Georgia, serif; }
-  .title-display {
-    font-family: 'SugarMagic', 'Fraunces', Georgia, serif;
-    font-weight: 400;
-    letter-spacing: -0.05em;
-  }
-  .title-cure {
-    font-family: 'Alice', Georgia, serif;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-  }
-  .title-a {
-    font-family: 'Alice', Georgia, serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  .title-dot {
-    font-family: 'Alice', Georgia, serif;
-    font-weight: 400;
-    font-size: 0.42em;
-    line-height: 0.7;
-    vertical-align: middle;
-    display: inline-block;
-    transform: translateY(-0.08em);
-  }
+  h1,h2,h3,h4,h5,h6 { font-family: 'SugarMagic', Georgia, serif; }
   .bg-paper-grain {
     background-color: oklch(0.94 0.025 80);
     background-image:
@@ -147,8 +125,8 @@
 <section class="border-b border-ink/15">
   <div class="max-w-[1200px] mx-auto px-6 lg:px-10 pt-10 pb-6">
     <div class="flex items-baseline justify-between gap-4 flex-wrap">
-      <h1 class="title-display leading-[0.85]" style="font-size: clamp(3.5rem, 11vw, 9.5rem);">
-        Decoding <span class="title-a">a</span> <span class="title-cure text-oxblood">Cure</span><span class="title-dot text-mustard">.</span>
+      <h1 class="font-display font-medium tracking-[-0.04em] leading-[0.85]" style="font-size: clamp(3.5rem, 11vw, 9.5rem);">
+        Decoding <span class="font-display italic font-light text-oxblood">a Cure</span><span class="text-mustard">.</span>
       </h1>
       <div class="text-right hidden lg:block">
         <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft mb-1">Hosted by</div>
@@ -169,37 +147,57 @@
 
 <!-- HERO -->
 <section class="border-b border-ink/15">
-  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-12 grid grid-cols-12 gap-x-6 gap-y-10">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-12 md:py-16 grid grid-cols-12 gap-x-8 gap-y-10 items-start">
+    
+    <!-- Left Column: Figure & Image -->
     <figure class="col-span-12 md:col-span-7 relative">
-      <div class="bg-paper-deep p-3 md:p-4 shadow-paper origin-top-left" style="transform: rotate(-0.6deg);">
-        <img src="assets/hero-illustration.jpg" alt="Hand-painted illustration of two hosts in armchairs" class="w-full h-auto block" onerror="this.parentElement.innerHTML='<div class=\'w-full h-64 flex items-center justify-center text-ink/30 font-display italic text-xl\'>hero illustration</div>'" />
+      <div class="bg-paper-deep p-3 md:p-4 shadow-paper origin-top-left transition-transform hover:rotate-0 duration-300" style="transform: rotate(-0.6deg);">
+        <img src="assets/hero-illustration.jpg" alt="Hand-painted illustration of two hosts in armchairs" class="w-full h-auto block" onerror="this.parentElement.innerHTML='<div class=\'w-full h-72 flex items-center justify-center text-ink/30 font-display italic text-xl\'>hero illustration</div>'" />
       </div>
-      <figcaption class="mt-4 text-xs italic text-ink-soft md:max-w-md">
+      <figcaption class="mt-4 text-xs italic text-ink-soft max-w-md flex items-center gap-2">
+        <span class="inline-block w-2 h-px bg-ink-soft/40"></span>
         Fig. 1 — Where the conversations happen.
       </figcaption>
     </figure>
-    <div class="col-span-12 md:col-span-5 md:pt-6">
-      <p class="font-display text-pretty" style="font-size: 1.35rem; line-height: 1.55;">
-        <div class="col-span-12 md:col-span-7 font-display italic text-xl md:text-2xl text-ink/80 leading-snug max-w-2xl">
-        Mission Statement:
+
+    <!-- Right Column: Content Block -->
+    <div class="col-span-12 md:col-span-5 md:pt-2 flex flex-col justify-between h-full">
+      
+      <!-- Mission Statement Block -->
+      <div class="space-y-2">
+        <div class="text-[11px] uppercase tracking-[0.22em] font-medium text-oxblood flex items-center gap-2">
+          <span>Mission Statement</span>
+          <span class="flex-1 h-px bg-oxblood/20"></span>
+        </div>
+        <p class="font-display text-ink/90 leading-[1.6] text-lg md:text-[1.25rem] text-pretty first-letter:float-left first-letter:font-display first-letter:text-6xl first-letter:font-medium first-letter:text-oxblood first-letter:mr-3 first-letter:mt-1 first-letter:leading-none">
+          Artificial intelligence is rapidly changing the way healthcare works — from detecting diseases earlier to helping doctors make critical decisions. This platform exists to make those changes understandable, and to ask whether they are also equitable.
+        </p>
       </div>
-        <span class="float-left font-display font-medium text-oxblood mr-2 mt-1" style="font-size: 5.5rem; line-height: 0.8;">A</span>
-        rtificial intelligence is rapidly changing the way healthcare works — from detecting diseases earlier to helping doctors make critical decisions. This platform exists to make those changes understandable, and to ask whether they are also equitable.
-      </p>
-      <p class="mt-5 text-base text-ink/75 leading-relaxed max-w-md">
-        <div class="col-span-12 md:col-span-7 font-display italic text-xl md:text-2xl text-ink/80 leading-snug max-w-2xl">
-        About:
+
+      <!-- About Block -->
+      <div class="mt-8 space-y-2">
+        <div class="text-[11px] uppercase tracking-[0.22em] font-medium text-ink-soft flex items-center gap-2">
+          <span>About</span>
+          <span class="flex-1 h-px bg-ink/10"></span>
+        </div>
+        <p class="text-sm md:text-base text-ink/75 leading-relaxed">
+          <strong class="font-medium text-ink">Decoding a Cure</strong> is an educational platform exploring how AI is transforming medicine: making diagnosis faster, treatment more precise, and care more accessible — while honestly questioning the ethics, bias, and trust that come along with it.
+        </p>
       </div>
-        Decoding a Cure is an educational platform exploring how AI is transforming medicine: making diagnosis faster, treatment more precise, and care more accessible — while honestly questioning the ethics, bias, and trust that come along with it.
-      </p>
-      <div class="mt-8 flex items-center gap-5">
-        <a href="episodes.html" class="group inline-flex items-center gap-3 bg-ink text-paper px-5 py-3 text-sm tracking-wide hover:bg-oxblood transition-colors">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" style="width:0.9em;height:0.9em;"><polygon points="5,3 19,12 5,21"/></svg>
+
+      <!-- Action Buttons -->
+      <div class="mt-10 pt-4 flex flex-wrap items-center gap-5 border-t border-ink/10">
+        <a href="episodes.html" class="group inline-flex items-center gap-3 bg-ink text-paper px-5 py-3 text-xs uppercase tracking-[0.15em] font-medium hover:bg-oxblood transition-colors shadow-sm">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" style="width:0.85em; height:0.85em;"><polygon points="5,3 19,12 5,21"/></svg>
           Play the latest
         </a>
-        <a href="episodes.html" class="text-sm font-display italic text-ink/80 hover:text-oxblood transition-colors underline decoration-ink/30 underline-offset-4">or browse the index →</a>
+        <a href="episodes.html" class="text-xs uppercase tracking-[0.15em] font-display italic text-ink/80 hover:text-oxblood transition-colors underline decoration-ink/30 underline-offset-4">
+          browse the index →
+        </a>
       </div>
+
     </div>
+
   </div>
 </section>
 
