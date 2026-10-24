@@ -66,6 +66,30 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'Inter', system-ui, sans-serif; }
   h1,h2,h3,h4,h5,h6 { font-family: 'MyFunFont', Georgia, serif; }
+  .title-display {
+    font-family: 'SugarMagic', 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+  }
+  .title-cure {
+    font-family: 'Alice', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+  .title-a {
+    font-family: 'Alice', Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .title-dot {
+    font-family: 'Alice', Georgia, serif;
+    font-weight: 400;
+    font-size: 0.42em;
+    line-height: 0.7;
+    vertical-align: middle;
+    display: inline-block;
+    transform: translateY(-0.08em);
+  }
   .bg-paper-grain {
     background-color: oklch(0.94 0.025 80);
     background-image:
@@ -124,8 +148,8 @@
 <section class="border-b border-ink/15">
   <div class="max-w-[1200px] mx-auto px-6 lg:px-10 pt-10 pb-6">
     <div class="flex items-baseline justify-between gap-4 flex-wrap">
-      <h1 class="font-display font-medium tracking-[-0.04em] leading-[0.85]" style="font-size: clamp(3.5rem, 11vw, 9.5rem);">
-        Decoding <span class="italic font-light">a</span> <span class="text-oxblood" style="font-family: 'Alice';">Cure</span><span class="text-mustard">.</span>
+      <h1 class="title-display leading-[0.85]" style="font-size: clamp(3.5rem, 11vw, 9.5rem);">
+        Decoding <span class="title-a">a</span> <span class="title-cure text-oxblood">Cure</span><span class="title-dot text-mustard">.</span>
       </h1>
       <div class="text-right hidden lg:block">
         <div class="text-[11px] uppercase tracking-[0.25em] text-ink-soft mb-1">Hosted by</div>
