@@ -68,12 +68,10 @@
   body { font-family: 'Inter', system-ui, sans-serif; }
   h1,h2,h3,h4,h5,h6 { font-family: 'SugarMagic', Georgia, serif; }
   .bg-paper-grain {
-    background-color: oklch(0.94 0.025 80);
-    background-image:
-      radial-gradient(oklch(0.22 0.04 25 / 0.04) 1px, transparent 1px),
-      radial-gradient(oklch(0.22 0.04 25 / 0.025) 1px, transparent 1px);
-    background-size: 3px 3px, 7px 7px;
-    background-position: 0 0, 1px 2px;
+    background-image: url('background.pdf'); /* Or 'background.jpg' / 'background.png' */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .deco-rule {
     background-image: linear-gradient(to right, oklch(0.22 0.04 25) 50%, transparent 50%);
@@ -319,10 +317,10 @@
         </div>
       </form>
       <div class="mt-8 grid grid-cols-2 gap-y-2 text-sm font-display">
-        <a href="#" class="text-ink/80 hover:text-oxblood underline-offset-4 hover:underline">Apple Podcasts</a>
-        <a href="#" class="text-ink/80 hover:text-oxblood underline-offset-4 hover:underline">Spotify</a>
-        <a href="#" class="text-ink/80 hover:text-oxblood underline-offset-4 hover:underline">Overcast</a>
-        <a href="#" class="text-ink/80 hover:text-oxblood underline-offset-4 hover:underline">RSS feed</a>
+        <a href="https://music.amazon.com/podcasts/3a13905d-8439-4305-9f0d-d816cb1c8685/decoding-a-cure-exploring-ai-research-and-the-future-of-medicine" class="text-ink/80 hover:text-oxblood underline-offset-4 hover:underline">Amazon Music</a>
+        <a href="https://open.spotify.com/show/033RRk4BKHucEdQuuPqOCM" class="text-ink/80 hover:text-oxblood underline-offset-4 hover:underline">Spotify</a>
+        <a href="https://pocketcasts.com/podcast/decoding-a-cure-exploring-ai-research-and-the-future-of-medicine/67f471d0-65fc-013f-bd7c-0e96a31080a7" class="text-ink/80 hover:text-oxblood underline-offset-4 hover:underline">Pocket Casts</a>
+        <a href="https://www.iheart.com/podcast/269-decoding-a-cure-exploring-339193758/" class="text-ink/80 hover:text-oxblood underline-offset-4 hover:underline">iHeartRadio</a>
       </div>
     </div>
   </div>
