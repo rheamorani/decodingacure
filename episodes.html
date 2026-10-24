@@ -75,34 +75,26 @@
     <div class="grid md:grid-cols-12 gap-x-10 gap-y-6 items-start">
       <div class="md:col-span-8">
         <div class="flex items-baseline gap-4 mb-3">
-          <span class="font-display text-sm text-ink-soft tabular-nums">No. 01</span>
-          <span class="text-[10px] uppercase tracking-[0.2em] text-ink-soft">Jul · 19, 2026</span>
-          <span class="text-[10px] uppercase tracking-[0.2em] text-ink-soft">45:40</span>
+          <!-- ADDED IDs HERE -->
+          <span id="featured-num" class="font-display text-sm text-ink-soft tabular-nums">No. 03</span>
+          <span id="featured-date" class="text-[10px] uppercase tracking-[0.2em] text-ink-soft">Aug · 01, 2026</span>
+          <span id="featured-duration" class="text-[10px] uppercase tracking-[0.2em] text-ink-soft">38:15</span>
         </div>
-        <h2 class="font-display text-3xl md:text-5xl font-medium tracking-tight leading-[1.0] mb-5">Advanced Imaging &amp; Advanced AI Technology: With Dr. Priya Bhosale</h2>
-        <p class="text-ink/75 leading-relaxed max-w-2xl text-lg mb-8">
-          In this episode of Decoding a Cure, host Rhea Morani sits down with Dr. Priya Bhosale to explore how artificial intelligence, quantitative imaging, and advanced MRI/PET-CT methods are reshaping oncology care—especially in the early detection of aggressive gynecological and pancreatic malignancies.
+        <h2 id="featured-title" class="font-display text-3xl md:text-5xl font-medium tracking-tight leading-[1.0] mb-5">Episode Title Three Here</h2>
+        <p id="featured-blurb" class="text-ink/75 leading-relaxed max-w-2xl text-lg mb-8">
+          Description for your latest featured episode goes here...
         </p>
         <div class="flex items-center gap-4 flex-wrap">
           <button onclick="openPlayer(0)" class="inline-flex items-center gap-3 bg-ink text-paper px-6 py-3 text-sm tracking-wide hover:bg-oxblood transition-colors">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
             Play episode
           </button>
-          <div class="font-display text-base">Dr. Priya Bhosale</div>
-          <div class="text-xs text-ink-soft">Professor of Radiology, UT MD Anderson Cancer Center</div>
+          <div id="featured-guest" class="font-display text-base">Dr. Guest Name</div>
+          <div id="featured-affil" class="text-xs text-ink-soft">Affiliation details</div>
         </div>
       </div>
       <div class="md:col-span-4">
-        <div class="bg-paper-deep p-4" style="transform: rotate(-1deg);">
-          <svg width="100%" viewBox="0 0 240 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="240" height="280" fill="oklch(0.88 0.04 78)"/>
-            <ellipse cx="90" cy="140" rx="40" ry="58" stroke="oklch(0.38 0.12 28)" stroke-width="1.5" opacity="0.5"/>
-            <ellipse cx="150" cy="140" rx="40" ry="58" stroke="oklch(0.38 0.12 28)" stroke-width="1.5" opacity="0.5"/>
-            <path d="M90 82 Q120 70 150 82" stroke="oklch(0.38 0.12 28)" stroke-width="1" opacity="0.4"/>
-            <path d="M90 198 Q120 210 150 198" stroke="oklch(0.38 0.12 28)" stroke-width="1" opacity="0.4"/>
-            <text x="120" y="148" font-family="serif" font-size="11" fill="oklch(0.38 0.12 28)" text-anchor="middle" opacity="0.6" font-style="italic">QIAC</text>
-          </svg>
-        </div>
+        <!-- SVG graphic stays same -->
       </div>
     </div>
   </div>
@@ -128,21 +120,21 @@
       <div class="flex-1 h-px deco-rule"></div>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <a href="#" class="group border border-ink/15 p-5 hover:border-oxblood hover:bg-paper-deep transition-all">
-        <div class="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2 group-hover:text-mustard transition-colors">Platform I</div>
-        <div class="font-display text-lg group-hover:text-oxblood transition-colors">Apple Podcasts</div>
+      <a href="https://open.spotify.com/show/033RRk4BKHucEdQuuPqOCM" class="group border border-ink/15 p-5 hover:border-oxblood hover:bg-paper-deep transition-all">
+        <div class="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2 group-hover:text-mustard transition-colors">I</div>
+        <div class="font-display text-lg group-hover:text-oxblood transition-colors">Amazon Music</div>
       </a>
-      <a href="#" class="group border border-ink/15 p-5 hover:border-oxblood hover:bg-paper-deep transition-all">
-        <div class="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2 group-hover:text-mustard transition-colors">Platform II</div>
+      <a href="https://music.amazon.com/podcasts/3a13905d-8439-4305-9f0d-d816cb1c8685/decoding-a-cure-exploring-ai-research-and-the-future-of-medicine" class="group border border-ink/15 p-5 hover:border-oxblood hover:bg-paper-deep transition-all">
+        <div class="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2 group-hover:text-mustard transition-colors">II</div>
         <div class="font-display text-lg group-hover:text-oxblood transition-colors">Spotify</div>
       </a>
-      <a href="#" class="group border border-ink/15 p-5 hover:border-oxblood hover:bg-paper-deep transition-all">
-        <div class="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2 group-hover:text-mustard transition-colors">Platform III</div>
-        <div class="font-display text-lg group-hover:text-oxblood transition-colors">Overcast</div>
+      <a href="https://pocketcasts.com/podcast/decoding-a-cure-exploring-ai-research-and-the-future-of-medicine/67f471d0-65fc-013f-bd7c-0e96a31080a7" class="group border border-ink/15 p-5 hover:border-oxblood hover:bg-paper-deep transition-all">
+        <div class="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2 group-hover:text-mustard transition-colors">III</div>
+        <div class="font-display text-lg group-hover:text-oxblood transition-colors">Pocket Casts</div>
       </a>
-      <a href="#" class="group border border-ink/15 p-5 hover:border-oxblood hover:bg-paper-deep transition-all">
-        <div class="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2 group-hover:text-mustard transition-colors">Feed</div>
-        <div class="font-display text-lg group-hover:text-oxblood transition-colors">RSS</div>
+      <a href="https://www.iheart.com/podcast/269-decoding-a-cure-exploring-339193758/" class="group border border-ink/15 p-5 hover:border-oxblood hover:bg-paper-deep transition-all">
+        <div class="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2 group-hover:text-mustard transition-colors">IV</div>
+        <div class="font-display text-lg group-hover:text-oxblood transition-colors">iHeartRadio</div>
       </a>
     </div>
   </div>
@@ -195,7 +187,7 @@
 
 <footer class="border-t border-ink/15">
   <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-ink-soft">
-    <div class="font-display italic">Decoding a Cure — printed on the internet, one Thursday at a time.</div>
+    <div class="font-display italic">Decoding a Cure.</div>
     <div class="flex items-center gap-4">
       <span>© <span id="year"></span></span><span>·</span><span>Written, recorded &amp; edited by hand.</span>
     </div>
@@ -208,17 +200,51 @@
 
   const episodes = [
     {
-      n:"No. 01",
-      date:"Jul · 19, 2026",
-      title:"Advanced Imaging & Advanced AI Technology: With Dr. Priya Bhosale",
-      guest:"Dr. Priya Bhosale",
-      affil:"Professor of Radiology, UT MD Anderson Cancer Center",
-      blurb:"In this episode, Rhea Morani explores how AI, radiomics, and advanced MRI/PET-CT methods are changing oncology care, from predicting treatment response to confronting the ethical risks of machine-learning in medicine.",
-      duration:"45:40",
+      n: "No. 03",
+      date: "Oct · 03, 2026",
+      title: "The Eye of Modern Medicine: AI Foundation Models and the New Era of Cancer Detection",
+      guest: "Dr. Mayur Virarkar",
+      affil: "University of Florida College of Medicine - Jacksonville",
+      blurb: "In this episode of Decoding a Cure, host Rhea Morani sits down with academic radiologist Dr. Mayur K. Virarkar, Chief of the Division of Abdominal and Body Imaging and Director of Research and Quality at the University of Florida College of Medicine, Jacksonville. They bridge the gap between clinical radiology and artificial intelligence to explore how advanced technology is shifting medicine from reacting to disease to catching it early.",
+      duration: "23:29",
+      durationSec: 1409,
+      audio: "episodes/Mayur Virarkar.wav"
+    },
+    {
+      n: "No. 02",
+      date: "Aug · 24, 2026",
+      title: "The Doctor's Doctor: Inside the Hidden World of Pathology with Dr. Linda Green",
+      guest: "Dr. Linda Green",
+      affil: "Michael E. DeBakey VA Medical Center",
+      blurb: "Most patients never meet the person who actually diagnoses their cancer. In this episode of Decoding a Cure, host Rhea Morani talks with Dr. Linda Green, Professor of Pathology at Baylor College of Medicine and Director of Cytopathology and Flow Cytometry at the Michael E. DeBakey VA Medical Center in Houston. She's a pathologist who has spent nearly 40 years working the side of medicine that happens under a microscope, out of sight but rarely out of mind for the doctors who depend on her. Dr. Green walks us through what it's actually like to be the \"doctor's doctor,\" the specialist surgeons and oncologists call when they need to know, definitively, what they're dealing with. She describes the strange, careful science of turning a biopsy into an answer: formaldehyde, hot wax, paper-thin slices, and dye that makes invisible cells suddenly legible.",
+      duration: "39:09",
+      durationSec: 1749,
+      audio: "episodes/Linda Green.mp3"
+    },
+    {
+      n: "No. 01",
+      date: "Jul · 19, 2026",
+      title: "Advanced Imaging & Advanced AI Technology: With Dr. Priya Bhosale",
+      guest: "Dr. Priya Bhosale",
+      affil: "Professor of Radiology, UT MD Anderson Cancer Center",
+      blurb: "In this episode of Decoding a Cure, host Rhea Morani sits down with Dr. Priya Bhosale to explore how artificial intelligence, quantitative imaging, and advanced MRI/PET-CT methods are reshaping oncology care—especially in the early detection of aggressive gynecological and pancreatic malignancies.",
+      duration: "45:40",
       durationSec: 2740,
-      audio:"Decoding a Cure- Episode 1 Priya Bhosale.mp3"
+      audio: "episodes/Decoding a Cure- Episode 1 Priya Bhosale.mp3"
     }
   ];
+
+  // Automatically load the latest episode into the featured section at the top
+  if (episodes.length > 0) {
+    const latest = episodes[0];
+    document.getElementById('featured-num').textContent = latest.n;
+    document.getElementById('featured-date').textContent = latest.date;
+    document.getElementById('featured-duration').textContent = latest.duration;
+    document.getElementById('featured-title').textContent = latest.title;
+    document.getElementById('featured-blurb').textContent = latest.blurb;
+    document.getElementById('featured-guest').textContent = latest.guest;
+    document.getElementById('featured-affil').textContent = latest.affil;
+  }
 
   const list = document.getElementById('episode-list');
   list.innerHTML = episodes.map((ep, i) => `
@@ -265,7 +291,7 @@
           <h3 class="font-display text-2xl md:text-3xl font-medium leading-snug mb-2">Simplified: Dual Chromatin And Cytoskeletal Remodeling by SETD2</h3>
           <p class="text-ink/65 leading-relaxed max-w-2xl text-sm md:text-base mb-4">We simplify a recent discovery about SETD2, a protein that modifies both histones and tubulin. This finding helps explain how SETD2 mutations can disrupt cell division and contribute to cancer.</p>
           <video class="w-full aspect-video bg-black object-contain" controls preload="metadata">
-            <source src="Breakthrough Junior Challenge Video 2024.mp4" type="video/mp4">
+            <source src="episodes/Breakthrough Junior Challenge Video 2024.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           <p class="text-xs text-ink-soft mt-3">Original paper: <a href="https://doi.org/10.1016/j.cell.2016.07.005" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 hover:text-oxblood">Dual Chromatin and Cytoskeletal Remodeling by SETD2</a></p>
