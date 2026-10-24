@@ -1,4 +1,6 @@
-/* --- Font Faces --- */
+/* ==========================================
+   1. Custom Fonts (@font-face)
+   ========================================== */
 @font-face {
   font-family: 'Thunky';
   src: url('Thunky DEMO.otf') format('truetype');
@@ -28,18 +30,36 @@
   font-style: normal;
 }
 
-/* --- Global Layout Styles --- */
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', system-ui, sans-serif; }
-h1, h2, h3, h4, h5, h6 { font-family: 'SugarMagic', Georgia, serif; }
 
-.bg-paper-grain {
-  background-image: url('background.jpg'); /* Make sure to use your actual image filename (.jpg or .png) */
-  background-size: 120px auto;
-  /* background-position: top left; */
-  background-repeat: repeat;
+/* ==========================================
+   2. Global Typography & Defaults
+   ========================================== */
+html { 
+  scroll-behavior: smooth; 
 }
 
+body { 
+  font-family: 'Inter', system-ui, sans-serif; 
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  font-family: 'SugarMagic', Georgia, serif; 
+}
+
+
+/* ==========================================
+   3. Background Pattern (Repeating JPG)
+   ========================================== */
+.bg-paper-grain {
+  background-color: oklch(98.262% 0.01184 67.479);
+  /* background-image: url('background.jpg'); Make sure your image file is named correctly
+  background-repeat: repeat;             Tiles the image across the page */
+}
+
+
+/* ==========================================
+   4. Custom UI & Helper Classes
+   ========================================== */
 .deco-rule {
   background-image: linear-gradient(to right, oklch(0.22 0.04 25) 50%, transparent 50%);
   background-size: 6px 1px;
@@ -54,7 +74,10 @@ h1, h2, h3, h4, h5, h6 { font-family: 'SugarMagic', Georgia, serif; }
   vertical-align: -0.125em; 
 }
 
-.nav-tab { position: relative; }
+.nav-tab { 
+  position: relative; 
+}
+
 .nav-tab.active::after {
   content: '';
   position: absolute;
@@ -62,4 +85,36 @@ h1, h2, h3, h4, h5, h6 { font-family: 'SugarMagic', Georgia, serif; }
   left: 0; right: 0;
   height: 2px;
   background-color: oklch(0.38 0.12 28);
+}
+
+.portrait-frame {
+  background-color: oklch(0.88 0.04 78);
+  padding: 12px;
+  box-shadow: 0 1px 0 oklch(0.22 0.04 25 / 0.08), 0 8px 24px -12px oklch(0.22 0.04 25 / 0.18);
+}
+
+.portrait-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: linear-gradient(160deg, oklch(0.85 0.04 78) 0%, oklch(0.80 0.06 75) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+blockquote {
+  border-left: 3px solid oklch(0.38 0.12 28);
+  padding-left: 1.5rem;
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+}
+
+.credential-tag {
+  display: inline-block;
+  border: 1px solid oklch(0.22 0.04 25 / 0.2);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: oklch(0.42 0.04 30);
 }
