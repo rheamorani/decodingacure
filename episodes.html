@@ -29,46 +29,7 @@
     }
   };
 </script>
-<style>
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', system-ui, sans-serif; }
-  h1,h2,h3,h4,h5,h6 { font-family: 'Fraunces', Georgia, serif; font-feature-settings: "ss01","ss02"; }
-  .bg-paper-grain {
-    background-color: oklch(0.94 0.025 80);
-    background-image:
-      radial-gradient(oklch(0.22 0.04 25 / 0.04) 1px, transparent 1px),
-      radial-gradient(oklch(0.22 0.04 25 / 0.025) 1px, transparent 1px);
-    background-size: 3px 3px, 7px 7px;
-    background-position: 0 0, 1px 2px;
-  }
-  .deco-rule {
-    background-image: linear-gradient(to right, oklch(0.22 0.04 25) 50%, transparent 50%);
-    background-size: 6px 1px;
-    background-repeat: repeat-x;
-    background-position: 0 50%;
-  }
-  .icon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.125em; }
-  .nav-tab { position: relative; }
-  .nav-tab.active::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0; right: 0;
-    height: 2px;
-    background-color: oklch(0.38 0.12 28);
-  }
-
-  /* Player bar */
-  #player-bar {
-    transform: translateY(100%);
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  #player-bar.open { transform: translateY(0); }
-
-  /* Progress bar */
-  #progress-track { cursor: pointer; }
-  #progress-fill { transition: width 0.25s linear; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="min-h-screen bg-paper-grain text-ink overflow-x-hidden font-body pb-28">
 
