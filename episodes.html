@@ -13,13 +13,13 @@
     theme: {
       extend: {
         colors: {
-          ink: 'oklch(0.22 0.04 25)',
-          'ink-soft': 'oklch(0.42 0.04 30)',
-          paper: 'oklch(0.94 0.025 80)',
-          'paper-deep': 'oklch(0.88 0.04 78)',
-          oxblood: 'oklch(0.38 0.12 28)',
-          mustard: 'oklch(0.7 0.14 70)',
-          sage: 'oklch(0.6 0.06 130)'
+          ink: 'oklch(0.31 0.055 245)',
+          'ink-soft': 'oklch(0.48 0.055 240)',
+          paper: 'oklch(0.98 0.015 230)',
+          'paper-deep': 'oklch(0.92 0.04 225)',
+          oxblood: 'oklch(0.63 0.14 225)',
+          mustard: 'oklch(0.69 0.12 285)',
+          sage: 'oklch(0.67 0.09 205)'
         },
         fontFamily: {
           display: ['SugarMagic', 'Fraunces', 'Georgia', 'serif'], /* <-- Added SugarMagic back */
@@ -38,7 +38,7 @@
   <div class="max-w-[1200px] mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-6">
     <a href="index.html" class="flex items-center gap-3 shrink-0">
       <div class="w-8 h-8 bg-ink rounded-sm flex items-center justify-center">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="oklch(0.94 0.025 80)" stroke-width="1.5">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="oklch(0.98 0.015 230)" stroke-width="1.5">
           <circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
           <line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/>
         </svg>
@@ -141,7 +141,7 @@
 </section>
 
 <!-- STICKY PLAYER BAR -->
-<div id="player-bar" class="fixed bottom-0 left-0 right-0 z-50 border-t border-ink/20 bg-paper-deep shadow-[0_-8px_32px_oklch(0.22_0.04_25_/_0.12)]">
+<div id="player-bar" class="fixed bottom-0 left-0 right-0 z-50 border-t border-ink/20 bg-paper-deep shadow-[0_-8px_32px_oklch(0.31_0.055_245_/_0.12)]">
   <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-4">
     <!-- Progress track -->
     <div id="progress-track" class="h-0.5 bg-ink/15 mb-4 relative" onclick="seekTo(event)">
