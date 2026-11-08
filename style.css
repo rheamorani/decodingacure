@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
    3. Background Pattern (Repeating JPG)
    ========================================== */
 .bg-paper-grain {
-  background-color: #DAECF3;
+  background-color: #ECFAFF;
   /* background-image: url('background.jpg'); Make sure your image file is named correctly
   background-repeat: repeat;             Tiles the image across the page */
 }
