@@ -99,10 +99,9 @@
         <h2 id="interest-title" class="font-display text-3xl md:text-4xl font-medium">Register your interest</h2>
         <p class="text-sm text-ink/70 leading-relaxed mt-3 mb-7">Share a few details and Rhea will follow up with more information. You must be 60 or older to register interest as a senior participant.</p>
 
-        <form id="gen-mix-form" action="https://formsubmit.co/rheamorani25@gmail.com" method="POST" class="space-y-5">
+        <form id="gen-mix-form" action="https://formsubmit.co/ajax/rheamorani25@gmail.com" method="POST" class="space-y-5">
           <input type="hidden" name="_subject" value="Gen Mix senior interest form">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://decodingacure.com/gen-mix.html?submitted=true">
           <div class="grid sm:grid-cols-2 gap-4">
             <div>
               <label for="senior-name" class="block text-xs font-medium mb-1.5">Your name <span aria-hidden="true">*</span></label>
@@ -157,6 +156,7 @@
             <button type="submit" class="inline-flex items-center justify-center bg-ink text-paper px-5 py-3 text-xs uppercase tracking-[0.12em] font-medium hover:bg-oxblood transition-colors">Submit interest form</button>
             <p id="form-status" role="status" aria-live="polite" class="text-sm text-ink-soft mt-3"></p>
             <p class="text-xs text-ink-soft leading-relaxed mt-3">Your answers will be sent through FormSubmit, a third-party form service, to Rhea. Please do not include health or other sensitive details. This is only an expression of interest; participation details and any required approvals and consent will be discussed separately before research activities begin.</p>
+            <p class="text-xs text-ink-soft leading-relaxed mt-2">Having trouble submitting? <a href="mailto:rheamorani25@gmail.com" class="underline underline-offset-2 hover:text-ink">Email Rhea directly</a>.</p>
           </div>
         </form>
       </section>
@@ -172,9 +172,44 @@
 </footer>
 
 <script>
-  if (new URLSearchParams(window.location.search).get('submitted') === 'true') {
-    document.getElementById('form-status').textContent = 'Thank you. Your interest form was received, and Rhea will follow up with you.';
-  }
+  const interestForm = document.getElementById('gen-mix-form');
+  const formStatus = document.getElementById('form-status');
+
+  interestForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const submitButton = interestForm.querySelector('button[type="submit"]');
+    const formData = new FormData(interestForm);
+    const payload = Object.fromEntries(formData.entries());
+    payload.devices = formData.getAll('devices');
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+    formStatus.textContent = 'Sending your interest form...';
+
+    try {
+      const response = await fetch(interestForm.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json();
+
+      if (!response.ok || result.success === false || result.success === 'false') {
+        throw new Error(result.message || 'The form could not be sent.');
+      }
+
+      formStatus.textContent = 'Thank you. Your interest form was sent, and Rhea will follow up with you.';
+      interestForm.reset();
+    } catch (error) {
+      formStatus.textContent = 'We could not send your form right now. Please try again or email Rhea directly.';
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Submit interest form';
+    }
+  });
 </script>
 </body>
 </html>
