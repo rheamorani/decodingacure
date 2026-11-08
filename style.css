@@ -3,21 +3,21 @@
    ========================================== */
 @font-face {
   font-family: 'Thunky';
-  src: url('Thunky DEMO.otf') format('truetype');
+  src: url('assets/fonts/Thunky DEMO.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SugarMagic';
-  src: url('Peachy Mighties.ttf') format('truetype');
+  src: url('assets/fonts/Peachy Mighties.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Alice';
-  src: url('Alice Simon DEMO.otf') format('truetype');
+  src: url('assets/fonts/Alice Simon DEMO.otf') format('opentype');
   font-weight: bolder;
   font-style: normal;
   font-size: large;
@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: 'Roherat';
-  src: url('Roherat-Regular.ttf') format('truetype');
+  src: url('assets/fonts/Roherat-Regular.ttf') format('truetype');
   font-weight: bolder;
   font-style: normal;
 }
@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================== */
 .bg-paper-grain {
   background-color: #ECFAFF;
-  /* background-image: url('background.jpg'); Make sure your image file is named correctly
+  /* background-image: url('assets/pictures/background.jpg'); Make sure your image file is named correctly
   background-repeat: repeat;             Tiles the image across the page */
 }
 
@@ -117,4 +117,12 @@ blockquote {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: #91BCDA;
+}
+
+.portrait-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 45%;
 }
