@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
    4. Custom UI & Helper Classes
    ========================================== */
 .deco-rule {
-  background-image: linear-gradient(to right, oklch(0.31 0.055 245) 50%, transparent 50%);
+  background-image: linear-gradient(to right, #16334a 50%, transparent 50%);
   background-size: 6px 1px;
   background-repeat: repeat-x;
   background-position: 0 50%;
@@ -84,11 +84,11 @@ h1, h2, h3, h4, h5, h6 {
   bottom: -2px;
   left: 0; right: 0;
   height: 2px;
-  background-color: oklch(0.68 0.045 263);
+  background-color: #6FA1C2;
 }
 
 .portrait-frame {
-  background-color: oklch(0.92 0.04 225);
+  background-color: #c9ebf9;
   padding: 12px;
   box-shadow: 0 1px 0 oklch(0.31 0.055 245 / 0.08), 0 8px 24px -12px oklch(0.31 0.055 245 / 0.18);
 }
@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 blockquote {
-  border-left: 3px solid oklch(0.68 0.045 263);
+  border-left: 3px solid #6FA1C2;
   padding-left: 1.5rem;
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
@@ -116,5 +116,5 @@ blockquote {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: oklch(0.48 0.055 240);
+  color: #40627a;
 }
